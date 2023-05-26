@@ -20,9 +20,11 @@ function displayVerses(value) {
             surahTitle.textContent = ayah.surah.englishName;
             quran.appendChild(surahTitle);
             opening = document.createElement('h2');
+            opening.classList.add("right");
             opening.textContent = (ayah.text).slice(0, 38)
-            ayahValue = document.createElement('h2');
-            ayahValue.textContent = (ayah.text).substr(39);
+            ayahValue = document.createElement('p');
+            ayahValue.classList.add("right");
+            ayahValue.textContent = (ayah.text).substr(39) + " " + "۝۱";
             quran.appendChild(opening);
             quran.appendChild(ayahValue);
             
@@ -31,6 +33,7 @@ function displayVerses(value) {
             temp = ""+ayah.numberInSurah;
             ayahNumber = temp.replace(/0/g, '۰').replace(/1/g, '۱').replace(/2/g, '۲').replace(/3/g, '۳').replace(/4/g, '٤').replace(/5/g, '٥').replace(/6/g, '٦').replace(/7/g, '۷').replace(/8/g, '۸').replace(/9/g, '۹').replace(/۴/g, '٤').replace(/۵/g, '٥').replace(/۶/g, '٦');
             ayahValue = document.createElement('p');
+            ayahValue.classList.add("right");
             ayahValue.textContent = ayah.text + " " + "۝" + ayahNumber;
             quran.appendChild(ayahValue);
         }

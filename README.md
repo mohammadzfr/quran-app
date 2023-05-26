@@ -12,6 +12,8 @@ A quran app that is focused on memorization and mastery.
 * Splitting ayaat audio
 * Student/Teacher or Child/Parent management structure
 * Live collaboration and viewing
+* Notetaking in app
+* Possible Hadith addition
 
 ## Resources
 * https://alquran.cloud/ for full Quran API

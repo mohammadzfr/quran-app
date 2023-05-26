@@ -2,6 +2,7 @@
 
 body {
     text-align: center;
+    font-family: "Amiri";
 }
 
 p {
@@ -9,3 +10,7 @@ p {
     font-family: "Amiri";
 
 }
+
+/* .right{
+    direction: rtl;
+  } */
