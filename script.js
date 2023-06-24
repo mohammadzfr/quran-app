@@ -41,3 +41,13 @@ function displayVerses(value) {
 
     })
 }
+
+document.addEventListener('mouseup', function() {
+    var selection = window.getSelection();
+    if (selection.toString().length > 0) {
+      console.log('Highlighted text:', selection.toString());
+      console.log(selection);
+      // Perform further actions with the highlighted text
+    }
+  });
+  
