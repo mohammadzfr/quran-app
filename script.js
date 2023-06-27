@@ -3,9 +3,9 @@ let surahTitle = document.createElement('h1');
 let ayahValue;
 let temp = "";
 let opening;
-const api = axios.get('http://api.alquran.cloud/v1/juz/30/quran-uthmani')
-.then(r => displayVerses(r))
-.catch(err => console.log(err));
+// const api = axios.get('http://api.alquran.cloud/v1/juz/30/quran-uthmani')
+// .then(r => displayVerses(r))
+// .catch(err => console.log(err));
 
 
 function displayVerses(value) {
@@ -47,7 +47,12 @@ document.addEventListener('mouseup', function() {
     if (selection.toString().length > 0) {
       console.log('Highlighted text:', selection.toString());
       console.log(selection);
+      const selRange = selection.getRangeAt(0);
+      
       // Perform further actions with the highlighted text
     }
   });
-  
+
+function display(event) {
+    console.log(event.target.innerHTML);
+}
