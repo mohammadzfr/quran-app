@@ -3,7 +3,7 @@ let surahTitle = document.createElement('h1');
 let ayahValue;
 let temp = "";
 let opening;
-// const api = axios.get('http://api.alquran.cloud/v1/juz/30/quran-uthmani')
+// const api = axios.get('http://api.alquran.cloud/v1/juz/01/quran-uthmani')
 // .then(r => displayVerses(r))
 // .catch(err => console.log(err));
 
@@ -42,17 +42,27 @@ function displayVerses(value) {
     })
 }
 
-document.addEventListener('mouseup', function() {
-    var selection = window.getSelection();
-    if (selection.toString().length > 0) {
-      console.log('Highlighted text:', selection.toString());
-      console.log(selection);
-      const selRange = selection.getRangeAt(0);
+// document.addEventListener('mouseup', function() {
+//     var selection = window.getSelection();
+//     if (selection.toString().length > 0) {
+//       console.log('Highlighted text:', selection.toString());
+//       console.log(selection);
+//       const selRange = selection.getRangeAt(0);
       
-      // Perform further actions with the highlighted text
-    }
-  });
+//       // Perform further actions with the highlighted text
+//     }
+//   });
 
 function display(event) {
     console.log(event.target.innerHTML);
+    let juzValue = event.target.innerHTML.split(" ");
+    juzValue.forEach(e => console.log(e));
+    let juzApi = "http://api.alquran.cloud/v1/juz/" + juzValue[1] + "/quran-uthmani";
+    const quran = document.querySelector('.quran');
+    while (quran.firstChild) {
+        quran.removeChild(quran.lastChild);
+      }
+    const api = axios.get(juzApi)
+    .then(r => displayVerses(r))
+    .catch(err => console.log(err));
 }
