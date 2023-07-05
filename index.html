@@ -5,18 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button.css">
     <title>Proto Quran App</title>
 </head>
 <body>
-    <h1>Prototype Quran App</h1>
-    <div class="content">
-        <div class="buttons">
-            <button class="juz">Juz 01</button><button class="juz">Juz 02</button><button class="juz">Juz 03</button><button class="juz">Juz 04</button><button class="juz">Juz 05</button><button class="juz">Juz 06</button><button class="juz">Juz 07</button><button class="juz">Juz 08</button><button class="juz">Juz 09</button><button class="juz">Juz 10</button><button class="juz">Juz 11</button><button class="juz">Juz 12</button><button class="juz">Juz 13</button><button class="juz">Juz 14</button><button class="juz">Juz 15</button><button class="juz">Juz 16</button><button class="juz">Juz 17</button><button class="juz">Juz 18</button><button class="juz">Juz 19</button><button class="juz">Juz 20</button><button class="juz">Juz 21</button><button class="juz">Juz 22</button><button class="juz">Juz 23</button><button class="juz">Juz 24</button><button class="juz">Juz 25</button><button class="juz">Juz 26</button><button class="juz">Juz 27</button><button class="juz">Juz 28</button><button class="juz">Juz 29</button><button class="juz">Juz 30</button>
+    <!-- START -->
+    <div class="main">
+
+        <!-- SIDE CONTENT (buttons, etc) -->
+        <nav class="sidebar">
+            <div class="tab-select">
+                <button class="tab juz-select active">Juz</button>
+                <button class="tab surah-select">Surah</button>
+                <div class="line"></div>
+            </div>
+
+            <div class="scrollbox">
+                <div class="buttons">
+                    <div class="juzs">
+                        <button class="juz">Juz 01</button><button class="juz">Juz 02</button><button class="juz">Juz 03</button><button class="juz">Juz 04</button><button class="juz">Juz 05</button><button class="juz">Juz 06</button><button class="juz">Juz 07</button><button class="juz">Juz 08</button><button class="juz">Juz 09</button><button class="juz">Juz 10</button><button class="juz">Juz 11</button><button class="juz">Juz 12</button><button class="juz">Juz 13</button><button class="juz">Juz 14</button><button class="juz">Juz 15</button><button class="juz">Juz 16</button><button class="juz">Juz 17</button><button class="juz">Juz 18</button><button class="juz">Juz 19</button><button class="juz">Juz 20</button><button class="juz">Juz 21</button><button class="juz">Juz 22</button><button class="juz">Juz 23</button><button class="juz">Juz 24</button><button class="juz">Juz 25</button><button class="juz">Juz 26</button><button class="juz">Juz 27</button><button class="juz">Juz 28</button><button class="juz">Juz 29</button><button class="juz">Juz 30</button>
+                    </div>
+                    <div class="surahs hidden">
+                        <button class="surah">1. Al-Faatiha</button><button class="surah">2. Al-Baqara</button><button class="surah">3. Aal-i-Imraan</button><button class="surah">4. An-Nisaa</button><button class="surah">5. Al-Maaida</button><button class="surah">6. Al-An'aam</button><button class="surah">7. Al-A'raaf</button><button class="surah">8. Al-Anfaal</button><button class="surah">9. At-Tawba</button><button class="surah">10. Yunus</button><button class="surah">11. Hud</button><button class="surah">12. Yusuf</button><button class="surah">13. Ar-Ra'd</button><button class="surah">14. Ibrahim</button><button class="surah">15. Al-Hijr</button><button class="surah">16. An-Nahl</button><button class="surah">17. Al-Israa</button><button class="surah">18. Al-Kahf</button><button class="surah">19. Maryam</button><button class="surah">20. Taa-Haa</button><button class="surah">21. Al-Anbiyaa</button><button class="surah">22. Al-Hajj</button><button class="surah">23. Al-Muminoon</button><button class="surah">24. An-Noor</button><button class="surah">25. Al-Furqaan</button><button class="surah">26. Ash-Shu'araa</button><button class="surah">27. An-Naml</button><button class="surah">28. Al-Qasas</button><button class="surah">29. Al-Ankaboot</button><button class="surah">30. Ar-Room</button><button class="surah">31. Luqman</button><button class="surah">32. As-Sajda</button><button class="surah">33. Al-Ahzaab</button><button class="surah">34. Saba</button><button class="surah">35. Faatir</button><button class="surah">36. Yaseen</button><button class="surah">37. As-Saaffaat</button><button class="surah">38. Saad</button><button class="surah">39. Az-Zumar</button><button class="surah">40. Ghafir</button><button class="surah">41. Fussilat</button><button class="surah">42. Ash-Shura</button><button class="surah">43. Az-Zukhruf</button><button class="surah">44. Ad-Dukhaan</button><button class="surah">45. Al-Jaathiya</button><button class="surah">46. Al-Ahqaf</button><button class="surah">47. Muhammad</button><button class="surah">48. Al-Fath</button><button class="surah">49. Al-Hujuraat</button><button class="surah">50. Qaaf</button><button class="surah">51. Adh-Dhaariyat</button><button class="surah">52. At-Tur</button><button class="surah">53. An-Najm</button><button class="surah">54. Al-Qamar</button><button class="surah">55. Ar-Rahmaan</button><button class="surah">56. Al-Waaqia</button><button class="surah">57. Al-Hadid</button><button class="surah">58. Al-Mujaadila</button><button class="surah">59. Al-Hashr</button><button class="surah">60. Al-Mumtahana</button><button class="surah">61. As-Saff</button><button class="surah">62. Al-Jumu'a</button><button class="surah">63. Al-Munaafiqoon</button><button class="surah">64. At-Taghaabun</button><button class="surah">65. At-Talaaq</button><button class="surah">66. At-Tahrim</button><button class="surah">67. Al-Mulk</button><button class="surah">68. Al-Qalam</button><button class="surah">69. Al-Haaqqa</button><button class="surah">70. Al-Ma'aarij</button><button class="surah">71. Nooh</button><button class="surah">72. Al-Jinn</button><button class="surah">73. Al-Muzzammil</button><button class="surah">74. Al-Muddaththir</button><button class="surah">75. Al-Qiyaama</button><button class="surah">76. Al-Insaan</button><button class="surah">77. Al-Mursalaat</button><button class="surah">78. An-Naba</button><button class="surah">79. An-Naazi'aat</button><button class="surah">80. Abasa</button><button class="surah">81. At-Takwir</button><button class="surah">82. Al-Infitaar</button><button class="surah">83. Al-Mutaffifin</button><button class="surah">84. Al-Inshiqaaq</button><button class="surah">85. Al-Burooj</button><button class="surah">86. At-Taariq</button><button class="surah">87. Al-A'laa</button><button class="surah">88. Al-Ghaashiya</button><button class="surah">89. Al-Fajr</button><button class="surah">90. Al-Balad</button><button class="surah">91. Ash-Shams</button><button class="surah">92. Al-Lail</button><button class="surah">93. Ad-Dhuhaa</button><button class="surah">94. Ash-Sharh</button><button class="surah">95. At-Tin</button><button class="surah">96. Al-Alaq</button><button class="surah">97. Al-Qadr</button><button class="surah">98. Al-Bayyina</button><button class="surah">99. Az-Zalzala</button><button class="surah">100. Al-Aadiyaat</button><button class="surah">101. Al-Qaari'a</button><button class="surah">102. At-Takaathur</button><button class="surah">103. Al-Asr</button><button class="surah">104. Al-Humaza</button><button class="surah">105. Al-Fil</button><button class="surah">106. Quraish</button><button class="surah">107. Al-Maa'un</button><button class="surah">108. Al-Kawthar</button><button class="surah">109. Al-Kaafiroon</button><button class="surah">110. An-Nasr</button><button class="surah">111. Al-Masad</button><button class="surah">112. Al-Ikhlaas</button><button class="surah">113. Al-Falaq</button><button class="surah">114. An-Naas</button>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                test
+            </footer>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <h1>Prototype Quran App</h1>
+            <div class="quran"></div>
         </div>
-        <div class="quran"></div>
-        <script src="./node_modules/axios/dist/axios.min.js"></script>
-        <script src="script.js"></script>
-        <script src="listeners.js"></script>
+        
+    
     </div>
+
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script src="listeners.js"></script>
 </body>
 </html>

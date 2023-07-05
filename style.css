@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
-
+* {
+    box-sizing: border-box;
+}
 body {
     /* text-align: center; */
     font-family: "Amiri";
-    
-}
-.content {
-    display: flex;
+    margin: 0px;
+    padding: 0px;
 }
 p {
     font-size: 24px;
@@ -14,11 +14,57 @@ p {
 
 }
 
-.buttons {
+.main {
+    
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.tab-select {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.tab {
+    background: none;
+    color: black;
+}
+.line {
+    position: absolute;
+    top: 40px;
+    left: 21px;
+    width: 74px;
+    height: 5px;
+    border-radius: 10px;
+    background: #1900ff;
+    transition: all .3s ease-in-out;
+}
+.scrollbox {
+    overflow: auto;
+}
+.buttons>* {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    position: relative;
+    left: 250px;
+    width: calc(100% - 250px);
 }
 .right{
     direction: rtl;
   }
+.hidden {
+    display: none;
+}
