@@ -2,12 +2,11 @@
 let ayahValue;
 let temp = "";
 let titleTemp = "";
-let opening;
 
 //DOM ELEMENTS
 const quran = document.querySelector('.quran');
 let surahTitle = document.createElement('h1');
-
+let opening = document.createElement('h2');
 // const api = axios.get('http://api.alquran.cloud/v1/quran/quran-uthmani')
 // .then(r => getSurahNames(r))
 // .catch(err => console.log(err));
@@ -23,9 +22,11 @@ function getSurahNames(surahs) {
 // displays highlighted phrase that the user hovers over
 function highlightPhrase() {
     var selection = window.getSelection();
+    var div = document.activeElement;
     if (selection.toString().length > 0) {
       console.log('Highlighted text:', selection.toString());
       console.log(selection);
+      console.log(div);
       const selRange = selection.getRangeAt(0);
       
       // Perform further actions with the highlighted text
@@ -42,14 +43,12 @@ function display(button) {
     //split button text and assign to API link
     console.log("Button clicked: " + button.target.innerHTML);
     let value = button.target.innerHTML.split(" ");
-    value.forEach(e => console.log(e));
     if (value[0] == "Juz") {
         apiString += "juz/" + value[1] + "/quran-uthmani";
     }
     else {
         apiString += "surah/" + extractNumbersFromString(value[0]);
     }
-    console.log(apiString);
     //clear quran
     clearVerses();
     
@@ -61,20 +60,37 @@ function display(button) {
 
 //Displays the verses based on the api link given
 function displayVerses(verses) {
+
+    //make the quran background visible
+    quran.classList.remove('hidden');
     console.log("Displaying verses...");
-    //first grab the surah title
+
+    //first grab the surah title depending on the Juz or Surah called
     console.log(verses);
     try {
         surahTitle.textContent = verses.data.data.ayahs[0].surah.englishName;
     } catch (error) {
-        console.log(error);
         surahTitle.textContent = verses.data.data.englishName;
     }
-    console.log("New Surah Title: " + surahTitle.textContent);
+
+    opening.textContent = (verses.data.data.ayahs[0].text).slice(0, 38);
+    ayahValue = document.createElement('p');
+    ayahValue.classList.add("right");
+    ayahValue.textContent = (verses.data.data.ayahs[0].text).substr(39) + " " + "۝۱";
+
+    console.log("Original Surah Title: " + surahTitle.textContent);
     quran.appendChild(surahTitle);
+    if (surahTitle.textContent == "Al-Faatiha") {
+        ayahValue.textContent = opening.textContent + " " + "۝۱";
+    }
+    else {
+        quran.appendChild(opening);
+    }
+    quran.appendChild(ayahValue);
 
     //loop through every ayah
-    verses.data.data.ayahs.forEach(ayah => {
+    verses.data.data.ayahs.forEach((ayah,index) => {
+        if (index === 0) return;
         //check if the surah title matches the surah title of the new ayat
         //if it doesn't...
         try {
@@ -82,7 +98,6 @@ function displayVerses(verses) {
         } catch (error) {
             titleTemp = verses.data.data.englishName;
         }
-        console.log(titleTemp);
         if (surahTitle.textContent != titleTemp) {
             //reassign surah title
             console.log("Surah Title doesn't match, printing new surah title...");
@@ -115,7 +130,7 @@ function displayVerses(verses) {
             //add the verse and push it to the right
             ayahValue = document.createElement('p');
             ayahValue.classList.add("right");
-            ayahValue.textContent = ayah.text + " " + "۝" + ayahNumber;
+            ayahValue.textContent += ayah.text + " " + "۝" + ayahNumber;
 
             //push it to the screen
             quran.appendChild(ayahValue);

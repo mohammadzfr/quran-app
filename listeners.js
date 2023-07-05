@@ -1,3 +1,5 @@
+const toggle = document.getElementById('toggleDark');
+const body = document.querySelector('body');
 const juz = document.querySelectorAll(".juz");
 const surah = document.querySelectorAll(".surah");
 const juzGroup = document.querySelector(".juzs");
@@ -13,6 +15,7 @@ document.addEventListener('mouseup', highlightPhrase);
 
 const tabs = document.querySelectorAll('.tab');
 const buttons = document.querySelectorAll('.buttons');
+
 tabs.forEach((tab, index) => {
     tab.addEventListener('click', (e) => {
         tabs.forEach(tab => {
@@ -37,3 +40,23 @@ tabs.forEach((tab, index) => {
 
 
 })
+
+
+
+
+toggle.addEventListener('click', function(){
+    this.classList.toggle('bi-moon');
+    if(this.classList.toggle('bi-brightness-high-fill')){
+        body.style.background = 'white';
+        body.style.color = 'black';
+        body.style.transition = '1s';
+        tabs.forEach(t => t.style.color = 'black');
+    }else{
+
+
+        body.style.background = '#1F2125';
+        body.style.color = 'white';
+        body.style.transition = '1s';
+        tabs.forEach(t => t.style.color = 'white');
+    }
+});

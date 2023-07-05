@@ -1,17 +1,17 @@
 button {
     align-items: center;
     background-clip: padding-box;
-    background-color: #0019fa;
+    background-color: rgb(255, 217, 0);
     border: 1px solid transparent;
     border-radius: .25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
     box-sizing: border-box;
-    color: #fff;
+    color: black;
     cursor: pointer;
     display: inline-flex;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif; */
     font-size: 16px;
-    font-weight: 600;
+    font-weight: bold;
     justify-content: center;
     line-height: 1.25;
     margin: 0;
@@ -27,11 +27,11 @@ button {
     width: auto;
   }
   
-  /* button:hover,
+  button:hover,
   button:focus {
-    background-color: #3261fb;
+    background-color: rgb(162, 138, 0);
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  } */
+  }
   
   /* button:hover {
     transform: translateY(-1px);

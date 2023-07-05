@@ -1,21 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+/* @font-face {
+    font-family: Kitab;
+    src: url(/assets/kitab-base.woff2);
+    unicode-range: U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC, U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+  }
+  @font-face {
+    font-family: Kitab;
+    src: url(/assets/kitab-base-bold.woff2);
+    font-weight: 700;
+    unicode-range: U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC, U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+  }
+  @font-face {
+    font-family: Kitab;
+    src: url(/assets/kitab-phrases.woff2);
+    unicode-range: U+6DE, U+6E9, U+E100-E103, U+FD3E-FD45, U+FD47-FD4F, U+FDFA-FDFB, U+FDFD-FDFF;
+  }
+  @font-face {
+    font-family: Kitab;
+    src: url(/assets/kitab-phrases.woff2);
+    font-weight: 700;
+    unicode-range: U+6DE, U+6E9, U+E100-E103, U+FD3E-FD45, U+FD47-FD4F, U+FDFA-FDFB, U+FDFD-FDFF;
+  } */
+
 * {
     box-sizing: border-box;
+    font-family: "Amiri";
 }
 body {
-    /* text-align: center; */
-    font-family: "Amiri";
     margin: 0px;
     padding: 0px;
+    background-color: #1F2125;
+    color: white;
+}
+.quran p {
+    font-size: 24px;
+
 }
 p {
-    font-size: 24px;
-    font-family: "Amiri";
-
+    margin: 8px;
+    padding: 0px;
 }
-
-.main {
-    
+i {
+    margin: 0px 8px;
+}
+h1,
+h2 {
+    text-align: center;
 }
 
 .sidebar {
@@ -27,6 +58,7 @@ p {
     display: flex;
     flex-direction: column;
     box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.75);
+    font-weight: 700;
 }
 
 .tab-select {
@@ -37,7 +69,7 @@ p {
 
 .tab {
     background: none;
-    color: black;
+    color: white;
 }
 .line {
     position: absolute;
@@ -46,7 +78,9 @@ p {
     width: 74px;
     height: 5px;
     border-radius: 10px;
-    background: #1900ff;
+    background: gold;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    
     transition: all .3s ease-in-out;
 }
 .scrollbox {
@@ -56,15 +90,35 @@ p {
     display: flex;
     flex-direction: column;
 }
-
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
 .content {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     left: 250px;
     width: calc(100% - 250px);
+    padding: 0px 100px;
+    margin-bottom: 50px;
+
+}
+.quran {
+    font-family: "Amiri";
+    max-width: 750px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    border: 5px solid gold;
+    border-top-left-radius: 50% 100px;
+    border-top-right-radius: 50% 100px;
+    padding: 12px;
 }
 .right{
     direction: rtl;
   }
+
 .hidden {
     display: none;
 }
