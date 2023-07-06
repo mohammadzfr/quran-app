@@ -57,7 +57,8 @@ h2 {
     height: 100%;
     display: flex;
     flex-direction: column;
-    box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+    background-color: #131518;
     font-weight: 700;
 }
 
@@ -71,6 +72,12 @@ h2 {
     background: none;
     color: white;
 }
+.tab:hover,
+.tab:focus {
+  background: none;
+  /* box-shadow: rgba(0, 0, 0, 0) 0 0px 0px; */
+}
+
 .line {
     position: absolute;
     top: 40px;
@@ -106,14 +113,27 @@ footer {
     margin-bottom: 50px;
 
 }
+.content h1 {
+    border: 3px solid gold;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+    padding: 12px;
+    border-radius: 50px;
+    margin-inline: max(100px, 0px);
+}
+.content h2 {
+    margin: 0px;
+}
 .quran {
     font-family: "Amiri";
     max-width: 750px;
+    background-color: #131518;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     border: 5px solid gold;
     border-top-left-radius: 50% 100px;
     border-top-right-radius: 50% 100px;
     padding: 12px;
+    overflow: hidden;
 }
 .right{
     direction: rtl;

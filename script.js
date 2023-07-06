@@ -7,6 +7,7 @@ let titleTemp = "";
 const quran = document.querySelector('.quran');
 let surahTitle = document.createElement('h1');
 let opening = document.createElement('h2');
+const help = document.querySelector('.help');
 // const api = axios.get('http://api.alquran.cloud/v1/quran/quran-uthmani')
 // .then(r => getSurahNames(r))
 // .catch(err => console.log(err));
@@ -39,6 +40,7 @@ function extractNumbersFromString(str) {
 
 //displays the set of verses the user selects
 function display(button) {
+    help.classList.add('hidden');
     let apiString = "http://api.alquran.cloud/v1/"
     //split button text and assign to API link
     console.log("Button clicked: " + button.target.innerHTML);

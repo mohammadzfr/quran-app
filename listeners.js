@@ -1,5 +1,8 @@
 const toggle = document.getElementById('toggleDark');
 const body = document.querySelector('body');
+const sidebar = document.querySelector('.sidebar');
+const Quran = document.querySelector('.quran');
+
 const juz = document.querySelectorAll(".juz");
 const surah = document.querySelectorAll(".surah");
 const juzGroup = document.querySelector(".juzs");
@@ -51,6 +54,11 @@ toggle.addEventListener('click', function(){
         body.style.color = 'black';
         body.style.transition = '1s';
         tabs.forEach(t => t.style.color = 'black');
+        quran.style.background = '#fffcc9';
+        sidebar.style.background = '#fffcc9';
+        quran.style.transition = '1s';
+        sidebar.style.transition = '1s';
+
     }else{
 
 
@@ -58,5 +66,9 @@ toggle.addEventListener('click', function(){
         body.style.color = 'white';
         body.style.transition = '1s';
         tabs.forEach(t => t.style.color = 'white');
+        quran.style.background = '#131518';
+        sidebar.style.background = '#131518';
+        quran.style.transition = '1s';
+        sidebar.style.transition = '1s';
     }
 });
